@@ -77,11 +77,11 @@
     **a) Trobar el nom dels alumnes que no tenen edat. Ordeneu el resultat pel camp nom.**
 
     ```sql
-    SELECT nom FROM alumne WHERE edat IS NULL;
+    SELECT nom FROM alumne WHERE edat IS NULL ORDER BY nom;
     ```
 
     **b) Trobeu ara els noms dels alumnes que si que tenen edat.**
 
     ```sql
-    SELECT nom FROM alumne WHERE edat IS NOT NULL;
+    SELECT nom FROM alumne WHERE edat IS NOT NULL ORDER BY nom;
     ```
