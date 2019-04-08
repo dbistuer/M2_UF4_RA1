@@ -12,21 +12,49 @@
 
 1. **Obtenir el nom de totes les assignatures classificades per ordre alfabètic.**
 
+   ```sql
+   SELECT nom FROM assignatura ORDER BY nom ASC;
+   ```
+
 2. 
 
    **a) Obtenir les ciutats dels alumnes majors de 18 anys.**
 
+   ```sql
+   SELECT ciutat FROM alumne WHERE edat > 18;
+   ```
+
    **b) El mateix però sense tuples (registres) repetides**
+
+   ```sql
+   SELECT DISTINCT ciutat FROM alumne WHERE edat > 18;
+   ```
 
 3. **Extreure totes les dades de l'assignatura amb nom 'LABOSOFT'**
 
+   ```sql
+   SELECT * FROM assignatura WHERE nom LIKE 'LABOSOFT';
+   ```
+
 4. **Obtenir els noms i l'edat dels alumnes que són de Lleida per ordre alfabètic (segons el camp nom).**
+
+   ```sql
+   SELECT nom,edat FROM alumne WHERE ciutat LIKE 'Lleida';
+   ```
 
 5. **Si fem la següent consulta ens dona error, perquè?:**
 
 6. **Obtenir el llistat de tots els alumnes majors d’edat (igual o major que de 18 anys), classificant-los per la ciutat d'origen en ordre creixent i per la seva edat en ordre decreixent dins dels de la mateixa ciutat.**
 
+   ```sql
+   SELECT * FROM alumne WHERE edat >= 18 ORDER BY ciutat ASC,edat DESC;
+   ```
+
 7. **El mateix però volem que enlloc de nom, ens surti IDENTITAT, i enlloc de ciutat que ens surti ORIGEN.**
+
+   ```sql
+   SELECT idalumne,'IDENTITAT',edat,'ORIGEN' FROM alumne WHERE edat >= 18 ORDER BY ciutat ASC,edat DESC;
+   ```
 
 8.  **Suposem ara que volem saber el nom, l’edat i l’any de naixement de cada alumne. Ordeneu la sortida per l'any de naixement en ordre decreixent.**
 
