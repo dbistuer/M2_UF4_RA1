@@ -1,6 +1,6 @@
-## M2 UF4 RA1 – Practica 4
+# M2 UF4 RA1 – Practica 4
 
-### Consultes en Postgres
+## Consultes en Postgres
 
 **L’objectiu d’aquesta activitat és realitzar una sèrie de consultes realitzades sobre el**
 **fitxer .sql adjunt a la pràctica. El nom del fitxer és practica.sql**
@@ -8,7 +8,7 @@
 **No s’acceptaran entregues fora de la data establerta sí no és amb justificació mèdica**
 **o qüestions de força major.**
 
-#### 1 – Realitza les següents consultes.
+### 1 – Realitza les següents consultes.
 
 1. **Obtenir el nom de totes les assignatures classificades per ordre alfabètic.**
 
