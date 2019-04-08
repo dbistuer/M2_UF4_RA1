@@ -56,9 +56,17 @@
    SELECT idalumne,'IDENTITAT',edat,'ORIGEN' FROM alumne WHERE edat >= 18 ORDER BY ciutat ASC,edat DESC;
    ```
 
-8.  **Suposem ara que volem saber el nom, l’edat i l’any de naixement de cada alumne. Ordeneu la sortida per l'any de naixement en ordre decreixent.**
+8. **Suposem ara que volem saber el nom, l’edat i l’any de naixement de cada alumne. Ordeneu la sortida per l'any de naixement en ordre decreixent.**
+
+   ```sql
+   SELECT nom,edat,EXTRACT(YEAR FROM current_date)-edat AS "ANY NAIXEMENT" FROM alumne ORDER BY "ANY NAIXEMENT" DESC;
+   ```
 
 9. **Trobeu les assignatures que tenen com a mínim 20 alumnes menys que 'EDI'. Ordeneu el resultat alfabèticament per nom de l'assignatura.**
+
+   ```sql
+   SELECT * FROM assignatura WHERE numalumnes >= ((SELECT numalumnes FROM assignatura  WHERE nom LIKE 'EDI')-20);
+   ```
 
 10. **Suposem ara que inserim el següent alumne (Observeu que el camp edat no s'omple, per tant tindrà valor nul):** 
 
@@ -67,4 +75,13 @@
     ```
 
     **a) Trobar el nom dels alumnes que no tenen edat. Ordeneu el resultat pel camp nom.**
+
+    ```sql
+    SELECT * FROM alumne WHERE edat IS NULL;
+    ```
+
     **b) Trobeu ara els noms dels alumnes que si que tenen edat.**
+
+    ```sql
+    SELECT * FROM alumne WHERE edat IS NOT NULL;
+    ```
