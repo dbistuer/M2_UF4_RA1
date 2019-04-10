@@ -48,7 +48,9 @@
    ```
    La columna numero 3 no existeix: idassignatura = 0,nom = 1, numalumnes = 2.
    El maxim numero per el qual pots ordenar es 2.
+
    Correcte filtrant per numalumnes:
+
    ```sql
    SELECT nom, numalumnes FROM assignatura ORDER BY 2;
    ```
