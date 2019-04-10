@@ -43,6 +43,19 @@
    ```
 
 5. **Si fem la següent consulta ens dona error, perquè?:**
+   ```sql
+   SELECT nom, numalumnes FROM assignatura ORDER BY 3;
+   ```
+   La columna numero 3 no existeix: idassignatura = 0,nom = 1, numalumnes = 2.
+   El maxim numero per el qual pots ordenar es 2.
+   Correcte filtrant per numalumnes:
+   ```sql
+   SELECT nom, numalumnes FROM assignatura ORDER BY 2;
+   ```
+   Correcte filtrant per nom:
+   ```sql
+   SELECT nom, numalumnes FROM assignatura ORDER BY 1;
+   ```
 
 6. **Obtenir el llistat de tots els alumnes majors d’edat (igual o major que de 18 anys), classificant-los per la ciutat d'origen en ordre creixent i per la seva edat en ordre decreixent dins dels de la mateixa ciutat.**
 
